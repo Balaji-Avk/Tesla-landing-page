@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div>
-        <nav className="fixed flex justify-between align-middle w-full h-20 text-white">
+        <nav className="fixed flex justify-between align-middle w-full h-20 text-white z-50">
           <a href="">
             <img src={TeslaLogo} alt="tesla logo" className='w-32 h-8 brightness-0 invert'/>
           </a>
@@ -35,11 +35,11 @@ function App() {
           </div>
 
         </nav>
-        <ul className='flex flex-col justify-center text-center list-none'>
-            <li className='abosulte flex flex-col'>
-              <video src={ExperienceTesla} className='' autoPlay loop muted></video>
+        <ul className='flex flex-col justify-center text-center list-none text-white overflow-auto font-medium snap-y snap-mandatory'>
+            <li className='relative flex flex-col h-screen w-screen justify-between snap-start snap-always'>
+              <video src={ExperienceTesla} className='absolute z-[-1] w-full h-full object-cover' autoPlay loop muted></video>
               <div>
-                <h1>Model Y</h1>
+                <h1 className='font-normal'>Model Y</h1>
                 <h2>From $31,890*</h2>
                 <p>After Federal Tax Credit & Est. Gas Savings</p>  
               </div>
@@ -52,19 +52,64 @@ function App() {
                 <a href="" className='underline'>Learn about est. gas savings.</a>
               </div>
             </li>
-            <li>
-              <img src={Model3}></img>
+            <li className='relative flex flex-col h-screen w-screen justify-between	snap-start snap-always'>
+              <img src={Model3}className='absolute z-[-1] w-full h-full object-cover'></img>
+              <div>
+                <h1>Brand New Model 3</h1>
+                <p>Lease starting at $329/mo*</p>
+              </div>
+              <div>
+                <div>
+                  <button>Custom Order</button>
+                  <button>Demo Drive</button>
+                </div>
+                <p>*Excludes taxes and fees with price subject to change. Available in select states. <a className='underline'>See Details</a></p>
+              </div>
             </li>
-            <li>
-              <img src={ModelX}></img>
+            <li className='relative flex flex-col h-screen w-screen justify-between snap-start snap-always'>
+              <img src={ModelX} className='absolute z-[-1] w-full h-full object-cover'></img>
+              <div>
+                <h1 className='font-normal'>Model X</h1>
+                <h2>From $68,590*</h2>
+                <p>After Federal Tax Credit & Est. Gas Savings</p>  
+              </div>
+              <div>
+                <div>
+                  <button>Custom Order</button>
+                  <button>Demo Drive</button>
+                </div>
+                <p>*Price before incentives and savings is $79,990, excluding taxes and fees. Subject to change.</p>
+                <a href="" className='underline'>Learn about est. gas savings.</a>
+              </div>
             </li>
-            <li>
-              <img src={ModelS}></img>
+            <li className='relative flex flex-col h-screen w-screen justify-between snap-start snap-always'>
+              <img src={ModelS} className='absolute z-[-1] w-full h-full object-cover'></img>
+              <div>
+                <h1 className='font-normal'>Model S</h1>
+                <h2>From $71,090*</h2>
+                <p>After Est. Gas Savings</p>  
+              </div>
+              <div>
+                <div>
+                  <button>Shop Available</button>
+                  <button>Demo Drive</button>
+                </div>
+                <p>*Price before incentives and savings is $74,990, excluding taxes and fees. Subject to change.</p>
+                <a href="" className='underline'>Learn about est. gas savings.</a>
+              </div>
             </li>
-            <li>
-              <video src={ModelY}></video>
+            <li className='relative flex flex-col h-screen w-screen justify-between snap-start snap-always'>
+              <video src={ModelY} className='absolute z-[-1] w-full h-full object-cover' autoPlay loop muted></video>
+              <div>
+                <h1>Experience Tesla</h1>
+                <h2>Schedule a Demo Drive Today</h2>
+              </div>
+              <div>
+                <button>Demo Drive</button>
+              </div>
             </li>
         </ul>
+        
       </div>      
     </>
   )
